@@ -16,6 +16,10 @@ class TestCalculator(unittest.TestCase):
     def test_sum_float(self):
         self.assertAlmostEqual(self.calculator.add(0.1, 1e25), 1e25)
 
+    def test_div_zero(self):
+        with self.assertRaises(ZeroDivisionError):
+            self.calculator.divide(9,0)
+
     def tearDown(self):
         pass
 
