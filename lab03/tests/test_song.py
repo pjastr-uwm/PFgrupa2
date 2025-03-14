@@ -22,6 +22,22 @@ class TestSongInitialization(unittest.TestCase):
         song2 = Song("Yesterday", 125)
         self.assertAlmostEqual(song2.calculate_royalty(), 12.5)
 
+    def test_add_artist(self):
+        song1 = Song("Bohemian Rhapsody", 355)
+        song1.add_artist("Freddie Mercury")
+        self.assertIn("Freddie Mercury", song1.artists)
+        song1.add_artist("Brain May")
+        self.assertIn("Brain May", song1.artists)
+        song1.add_artist("Roger Taylor")
+        self.assertIn("Roger Taylor", song1.artists)
+
+    def test_add_empty_artist(self):
+        song1 = Song("Bohemian Rhapsody", 355)
+        with self.assertRaises(ValueError) as context:
+            song1.add_artist("")
+            
+        self.assertEqual(str(context.exception), "Artist name cannot be empty")
+
     def tearDown(self):
         pass
 
