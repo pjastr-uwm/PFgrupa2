@@ -35,7 +35,7 @@ class TestSongInitialization(unittest.TestCase):
         song1 = Song("Bohemian Rhapsody", 355)
         with self.assertRaises(ValueError) as context:
             song1.add_artist("")
-            
+
         self.assertEqual(str(context.exception), "Artist name cannot be empty")
 
     def tearDown(self):
