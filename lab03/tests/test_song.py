@@ -1,6 +1,7 @@
 import unittest
 from src.song import Song
 
+
 class TestSongInitialization(unittest.TestCase):
 
     def setUp(self):
