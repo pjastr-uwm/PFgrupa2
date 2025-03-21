@@ -51,7 +51,8 @@ def main():
     print(
         "This is a very long line of code that is intentionally written "
         "to exceed the recommended maximum line length as per PEP8 standards"
-        " and should be flagged by flake8.")
+        " and should be flagged by flake8."
+    )
 
 
 if __name__ == "__main__":
