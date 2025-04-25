@@ -37,3 +37,17 @@ Feature: Cash Register Operations
     Given I add item "Book" with price 100.00
     When I try to apply a 150 percent discount
     Then I should get a discount error message
+
+  Scenario Outline: Apply various discounts and calculate total with tax
+    Given I add item "<item_name>" with price <price>
+    When I apply a <discount> percent discount
+    And I calculate the discounted total with tax
+    Then the final amount after discount and tax should be <expected_total>
+
+    Examples:
+      | item_name    | price  | discount | expected_total |
+      | Laptop       | 1000.00 | 20      | 984.00        |
+      | TV           | 500.00  | 10      | 553.50        |
+      | Phone        | 300.00  | 15      | 313.05        |
+      | Headphones   | 80.00   | 5       | 93.48         |
+      | Tablet       | 250.00  | 0       | 307.50        |
