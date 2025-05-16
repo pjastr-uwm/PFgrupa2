@@ -1,0 +1,61 @@
+{
+  "id": "5210bbe2-93df-47e3-b566-c86c27fb3892",
+  "version": "2.0",
+  "name": "grupa2",
+  "url": "https://the-internet.herokuapp.com",
+  "tests": [{
+    "id": "f732fc77-791a-4848-a7a0-6f78aabba345",
+    "name": "strona domowa",
+    "commands": [{
+      "id": "3b41cda0-246c-43b9-bdaa-4117b38496ff",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f869c6fa-418c-4943-b5ed-48c568803146",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1417x719",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff6bfc11-e1b9-4e55-affe-a9ced36a0764",
+      "comment": "",
+      "command": "click",
+      "target": "id=content",
+      "targets": [
+        ["id=content", "id"],
+        ["css=#content", "css:finder"],
+        ["xpath=//div[@id='content']", "xpath:attributes"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23c27b65-c805-4bdb-84c6-dc12279157a6",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h2",
+      "targets": [],
+      "value": "Available Examples"
+    }, {
+      "id": "7ce3c995-8ac2-4c92-b53d-fbd96be9e1c2",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2253e9dd-ea69-41c2-91a4-cf64b687de13",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f732fc77-791a-4848-a7a0-6f78aabba345"]
+  }],
+  "urls": ["https://the-internet.herokuapp.com/"],
+  "plugins": []
+}
